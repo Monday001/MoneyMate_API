@@ -1,0 +1,1526 @@
+Level 1: SMTP ERROR: Failed to connect to server: php_network_getaddresses: getaddrinfo for smtp-relay.brevo.com failed: No such host is known.  (0)
+Level 2: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 334 PDEuNDY5NjUyMTE0QDE5Mi4xNjguNDcuMTI2Pg==
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<lyttlebrianne@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <lyttlebrianne@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 29 Apr 2025 13:20:53 +0200
+
+Level 1: CLIENT -> SERVER: To: lyttlebrianne@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <c84ytSZ2FB2gHqD2lmoTqh0T1ji5zuz6yS7t2Pl5Rw@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 84724
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <c84ytSZ2FB2gHqD2lmoTqh0T1ji5zuz6yS7t2Pl5Rw@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH CRAM-MD5 PLAIN LOGIN
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH LOGIN CRAM-MD5 PLAIN
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 334 PDEuMjIxMTE4MjE3QDE5Mi4xNjguNDcuMTI2Pg==
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<lyttlebrianne@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <lyttlebrianne@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 29 Apr 2025 13:25:45 +0200
+
+Level 1: CLIENT -> SERVER: To: lyttlebrianne@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <xu5U3ZAu33JR4zRi6RCJQYemMr8rjLFJWWl8ygeo4Y@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 73032
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <xu5U3ZAu33JR4zRi6RCJQYemMr8rjLFJWWl8ygeo4Y@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 1: SMTP ERROR: Failed to connect to server: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond (10060)
+Level 2: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+Level 1: SMTP ERROR: Failed to connect to server: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond (10060)
+Level 2: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+Level 1: SMTP ERROR: Failed to connect to server: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond (10060)
+Level 2: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 334 PDEuODM3NDMyMDI3QDE5Mi4xNjguNDcuMTI2Pg==
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<lyttlebrianne@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <lyttlebrianne@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 29 Apr 2025 16:23:28 +0200
+
+Level 1: CLIENT -> SERVER: To: lyttlebrianne@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <79gU1CpLELXwwgK3jjjCq3fjxqcwoA1QL0SeNo3vnks@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 66764
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <79gU1CpLELXwwgK3jjjCq3fjxqcwoA1QL0SeNo3vnks@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH CRAM-MD5 PLAIN LOGIN
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH LOGIN CRAM-MD5 PLAIN
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 334 PDEuNTgzNjg0OTMzQDE5Mi4xNjguNDcuMTI2Pg==
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<lyttlebrianne@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <lyttlebrianne@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 29 Apr 2025 16:42:11 +0200
+
+Level 1: CLIENT -> SERVER: To: lyttlebrianne@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <M1AxcFrqhIOcIq85wvl4TYs8DqMYKWs3FRjK2f3UzIc@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 46562
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <M1AxcFrqhIOcIq85wvl4TYs8DqMYKWs3FRjK2f3UzIc@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH LOGIN CRAM-MD5 PLAIN
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 334 PDEuMTM5NjEyMTM1QDE5Mi4xNjguNDcuMTI2Pg==
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<lyttlebrianne@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <lyttlebrianne@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 29 Apr 2025 17:37:37 +0200
+
+Level 1: CLIENT -> SERVER: To: lyttlebrianne@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <q46E762nmrauTsIOducXpyYC4h59wHVlncl8xDRe4E@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 33984
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <q46E762nmrauTsIOducXpyYC4h59wHVlncl8xDRe4E@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 334 PDEuOTU5OTEwMzgxQDE5Mi4xNjguNDcuMTI2Pg==
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<lyttlebrianne@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <lyttlebrianne@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 29 Apr 2025 17:52:31 +0200
+
+Level 1: CLIENT -> SERVER: To: lyttlebrianne@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <8FmSMbYB8MUqFdDWqg0OvupOQSRThrdVrYzZfhBE0@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 14604
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <8FmSMbYB8MUqFdDWqg0OvupOQSRThrdVrYzZfhBE0@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH LOGIN CRAM-MD5 PLAIN
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH CRAM-MD5 PLAIN LOGIN
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 334 PDEuODgzMTMwOUAxOTIuMTY4LjQ3LjEyNj4=
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<lyttlebrianne@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <lyttlebrianne@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 29 Apr 2025 18:09:25 +0200
+
+Level 1: CLIENT -> SERVER: To: lyttlebrianne@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <zKD2yjclvNlSZ54z4GwvgyH5FCV2XMPGMGk3CjR0A@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 18805
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <zKD2yjclvNlSZ54z4GwvgyH5FCV2XMPGMGk3CjR0A@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 334 PDEuNjUzOTY3NjRAMTkyLjE2OC40Ny4xMjY+
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<lyttlebrianne@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <lyttlebrianne@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 29 Apr 2025 18:21:56 +0200
+
+Level 1: CLIENT -> SERVER: To: lyttlebrianne@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <iynYtAw7OYn1aIGckjuWapipAfe1Uu9MgoSZIrLfiok@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 17289
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <iynYtAw7OYn1aIGckjuWapipAfe1Uu9MgoSZIrLfiok@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 2: SERVER -> CLIENT: 334 PDEuODkzNzg2NTMyQDE5Mi4xNjguNDcuMTI2Pg==
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.47.126
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 334 PDEuNzYxNTkwMTY4QDE5Mi4xNjguNDcuMTI2Pg==
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<lyttlebrianne@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <lyttlebrianne@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.47.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 29 Apr 2025 18:56:13 +0200
+
+Level 1: CLIENT -> SERVER: To: lyttlebrianne@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <EI8tgFsc9A92LBuQfXBKffhxbAnE2OmYiZcLOTG8@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 65221
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<lyttlebrianne@gmail.com>
+
+Level 2: SERVER -> CLIENT: 334 PDEuMjM1ODg4MjgwQDE5Mi4xNjguNDcuMTI2Pg==
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <lyttlebrianne@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 29 Apr 2025 18:56:19 +0200
+
+Level 1: CLIENT -> SERVER: To: lyttlebrianne@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <sb1pIpGvPpnEySZ9iO8ho1MxycSjLg9IWLGaIEnqL8U@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 65862
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <EI8tgFsc9A92LBuQfXBKffhxbAnE2OmYiZcLOTG8@192.168.47.126>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<lyttlebrianne@gmail.com>
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <lyttlebrianne@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <sb1pIpGvPpnEySZ9iO8ho1MxycSjLg9IWLGaIEnqL8U@192.168.47.126>
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 29 Apr 2025 18:56:24 +0200
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 1: CLIENT -> SERVER: To: lyttlebrianne@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <QEUWgWnIZHqnsJ8hcdZUCRpViga4ASIaDhPWjdgWbo@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 60525
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <QEUWgWnIZHqnsJ8hcdZUCRpViga4ASIaDhPWjdgWbo@192.168.47.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 334 PDEuOTM0ODk1MjIwQDE5Mi4xNjguMTg2LjEyNj4=
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<lyttlebrianne@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <lyttlebrianne@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 6 May 2025 06:25:51 +0200
+
+Level 1: CLIENT -> SERVER: To: lyttlebrianne@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <jpFUNFr6p4enOtHF2Po1BoX0NyhBcpMjh3BXv1gcGM@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 88001
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <jpFUNFr6p4enOtHF2Po1BoX0NyhBcpMjh3BXv1gcGM@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH LOGIN CRAM-MD5 PLAIN
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 334 PDEuMjI2OTQ0MzcxQDE5Mi4xNjguMTg2LjEyNj4=
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<lyttlebrianne@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <lyttlebrianne@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 6 May 2025 06:25:55 +0200
+
+Level 1: CLIENT -> SERVER: To: lyttlebrianne@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <A7sPPyFeNCrYAPGr5I5uXib7T1pVfyLEHkhnB4BFqY@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 95898
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <A7sPPyFeNCrYAPGr5I5uXib7T1pVfyLEHkhnB4BFqY@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 334 PDEuODMzMTM3NzVAMTkyLjE2OC4xODYuMTI2Pg==
+
+Level 2: SERVER -> CLIENT: 334 PDEuODU4Mjk1MjZAMTkyLjE2OC4xODYuMTI2Pg==
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH LOGIN CRAM-MD5 PLAIN
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 334 PDEuMjE1Nzg4OTE0QDE5Mi4xNjguMTg2LjEyNj4=
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 334 PDEuMzEzMzQzMTM5QDE5Mi4xNjguMTg2LjEyNj4=
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <moneymate321@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <moneymate321@gmail.com> gets this
+
+
+
+Level 1: CLIENT -> SERVER: RCPT TO:<moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <moneymate321@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 6 May 2025 07:05:29 +0200
+
+Level 1: CLIENT -> SERVER: To: moneymate321@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <ISgwaa2XIIEfjXAokKI6NrHHTGnZt5Ww8KNAArt0uA@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 41756
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <moneymate321@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: Date: Tue, 6 May 2025 07:05:33 +0200
+
+Level 1: CLIENT -> SERVER: To: moneymate321@gmail.com
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <l1xvtaQIGCSpb3cT2vtK13xJyjI3430eR3XpuNUBI@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 45718
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 6 May 2025 07:05:36 +0200
+
+Level 1: CLIENT -> SERVER: To: moneymate321@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <rh9xqDuOJpTr5Faf1s60XC1gnQdKHUpUlzAIIEqBlo@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 97181
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 6 May 2025 07:05:40 +0200
+
+Level 1: CLIENT -> SERVER: To: moneymate321@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <fh62hgxjJPLAajALCquRQW6Tz0B87p5222MK4APXopg@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 95524
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <ISgwaa2XIIEfjXAokKI6NrHHTGnZt5Ww8KNAArt0uA@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <l1xvtaQIGCSpb3cT2vtK13xJyjI3430eR3XpuNUBI@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <rh9xqDuOJpTr5Faf1s60XC1gnQdKHUpUlzAIIEqBlo@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <fh62hgxjJPLAajALCquRQW6Tz0B87p5222MK4APXopg@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH LOGIN CRAM-MD5 PLAIN
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH CRAM-MD5 PLAIN LOGIN
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 334 PDEuODU2NDYzOTNAMTkyLjE2OC4xODYuMTI2Pg==
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <moneymate321@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 6 May 2025 07:43:03 +0200
+
+Level 1: CLIENT -> SERVER: To: moneymate321@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <49Q0eYwGGYekN1yHGMI8Hr6w34CFpNzSOc2lmMnD4LQ@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 53265
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <49Q0eYwGGYekN1yHGMI8Hr6w34CFpNzSOc2lmMnD4LQ@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 334 PDEuODk5OTU1NzAzQDE5Mi4xNjguMTg2LjEyNj4=
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <moneymate321@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 6 May 2025 07:57:05 +0200
+
+Level 1: CLIENT -> SERVER: To: moneymate321@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <oGuNBlgliqtsn6GnDI0ZRRPiA2bqgBp2frRJmks@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 59917
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <oGuNBlgliqtsn6GnDI0ZRRPiA2bqgBp2frRJmks@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
+Level 2: SERVER -> CLIENT: 220 smtp-relay.brevo.com ESMTP Service Ready
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-STARTTLS
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: STARTTLS
+
+Level 2: SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+Level 1: CLIENT -> SERVER: EHLO 192.168.186.126
+
+Level 2: SERVER -> CLIENT: 250-Hello 192.168.186.126
+250-PIPELINING
+250-8BITMIME
+250-ENHANCEDSTATUSCODES
+250-CHUNKING
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 SIZE 20971520
+
+Level 1: CLIENT -> SERVER: AUTH CRAM-MD5
+
+Level 2: SERVER -> CLIENT: 334 PDEuOTA5MzQwNjI4QDE5Mi4xNjguMTg2LjEyNj4=
+
+Level 1: CLIENT -> SERVER: [credentials hidden]
+Level 2: SERVER -> CLIENT: 235 2.0.0 Authentication succeeded
+
+Level 1: CLIENT -> SERVER: MAIL FROM:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 Roger, accepting mail from <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: RCPT TO:<moneymate321@gmail.com>
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 I'll make sure <moneymate321@gmail.com> gets this
+
+Level 1: CLIENT -> SERVER: DATA
+
+Level 2: SERVER -> CLIENT: 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+
+Level 1: CLIENT -> SERVER: Date: Tue, 6 May 2025 08:01:46 +0200
+
+Level 1: CLIENT -> SERVER: To: moneymate321@gmail.com
+
+Level 1: CLIENT -> SERVER: From: MoneyMate <moneymate321@gmail.com>
+
+Level 1: CLIENT -> SERVER: Subject: Password Reset OTP
+
+Level 1: CLIENT -> SERVER: Message-ID: <WeQ1MSgstGroPJVpo1BHioBWmdcRA9zC8789oq4Qg@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+Level 1: CLIENT -> SERVER: MIME-Version: 1.0
+
+Level 1: CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: Your OTP code is: 66018
+
+Level 1: CLIENT -> SERVER: 
+
+Level 1: CLIENT -> SERVER: .
+
+Level 2: SERVER -> CLIENT: 250 2.0.0 OK: queued as <WeQ1MSgstGroPJVpo1BHioBWmdcRA9zC8789oq4Qg@192.168.186.126>
+
+Level 1: CLIENT -> SERVER: QUIT
+
+Level 2: SERVER -> CLIENT: 221 2.0.0 Bye
+
