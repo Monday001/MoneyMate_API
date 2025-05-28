@@ -10,7 +10,7 @@ if (!$lender_id) {
 }
 
 // Fetch total number of users linked to the lender
-$user_sql = "SELECT COUNT(*) as user_count FROM users WHERE lender_id = ?";
+$user_sql = "SELECT COUNT(*) as user_count FROM repayments WHERE lender_id = ?";
 $user_stmt = $conn->prepare($user_sql);
 $user_stmt->bind_param("i", $lender_id);
 $user_stmt->execute();
@@ -23,7 +23,7 @@ $loan_status_sql = "
         SUM(CASE WHEN status = 'Approved' THEN 1 ELSE 0 END) as approved_count,
         SUM(CASE WHEN status = 'Denied' THEN 1 ELSE 0 END) as denied_count,
         SUM(CASE WHEN status = 'Pending' THEN 1 ELSE 0 END) as pending_count
-    FROM loan_applications 
+    FROM loans 
     WHERE lender_id = ?
 ";
 $loan_status_stmt = $conn->prepare($loan_status_sql);

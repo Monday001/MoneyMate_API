@@ -74,7 +74,7 @@ if (!empty($data['private_key']) && !empty($data['password'])) {
                 "success" => true,
                 "message" => "User login successful",
                 "user_type" => "user",
-                "user_id" => $user['id'],
+                "borrower_id" => $user['id'],
                 "username" => $user['username']
             ]);
         } else {

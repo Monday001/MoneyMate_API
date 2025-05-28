@@ -1,0 +1,5 @@
+[27-May-2025 06:58:46 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`moneymate`.`loans`, CONSTRAINT `loans_ibfk_1` FOREIGN KEY (`borrower_id`) REFERENCES `users` (`id`)) in C:\xampp\htdocs\moneymate\apply_loan.php:76
+Stack trace:
+#0 C:\xampp\htdocs\moneymate\apply_loan.php(76): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\moneymate\apply_loan.php on line 76

@@ -1,0 +1,10 @@
+{"loan_details":"{\"lender_id\":10,\"borrower_id\":16,\"amount\":\"20000\",\"purpose\":\"Fee\"}"}
+{"id_front":{"name":"1000178423.jpg","full_path":"1000178423.jpg","type":"image\/jpeg","tmp_name":"C:\\xampp\\tmp\\phpB262.tmp","error":0,"size":65187},"id_back":{"name":"1000178423.jpg","full_path":"1000178423.jpg","type":"image\/jpeg","tmp_name":"C:\\xampp\\tmp\\phpB283.tmp","error":0,"size":65187}}
+{"loan_details":"{\"lender_id\":10,\"borrower_id\":16,\"amount\":\"20000\",\"purpose\":\"Fee\"}"}
+{"id_front":{"name":"1000178423.jpg","full_path":"1000178423.jpg","type":"image\/jpeg","tmp_name":"C:\\xampp\\tmp\\phpA223.tmp","error":0,"size":65187},"id_back":{"name":"1000178423.jpg","full_path":"1000178423.jpg","type":"image\/jpeg","tmp_name":"C:\\xampp\\tmp\\phpA234.tmp","error":0,"size":65187}}
+{"loan_details":"{\"lender_id\":10,\"borrower_id\":16,\"amount\":\"20000\",\"purpose\":\"Fee\"}"}
+{"id_front":{"name":"1000178423.jpg","full_path":"1000178423.jpg","type":"image\/jpeg","tmp_name":"C:\\xampp\\tmp\\php7407.tmp","error":0,"size":65187},"id_back":{"name":"1000178423.jpg","full_path":"1000178423.jpg","type":"image\/jpeg","tmp_name":"C:\\xampp\\tmp\\php7427.tmp","error":0,"size":65187}}
+{"loan_details":"{\"lender_id\":10,\"borrower_id\":16,\"amount\":\"20000\",\"purpose\":\"Fee\"}"}
+{"id_front":{"name":"1000178423.jpg","full_path":"1000178423.jpg","type":"image\/jpeg","tmp_name":"C:\\xampp\\tmp\\phpBC7C.tmp","error":0,"size":65187},"id_back":{"name":"1000178423.jpg","full_path":"1000178423.jpg","type":"image\/jpeg","tmp_name":"C:\\xampp\\tmp\\phpBC8D.tmp","error":0,"size":65187}}
+{"loan_details":"{\"lender_id\":10,\"borrower_id\":16,\"amount\":\"20000\",\"purpose\":\"Fee\"}"}
+{"id_front":{"name":"1000178423.jpg","full_path":"1000178423.jpg","type":"image\/jpeg","tmp_name":"C:\\xampp\\tmp\\php34FC.tmp","error":0,"size":65187},"id_back":{"name":"1000178423.jpg","full_path":"1000178423.jpg","type":"image\/jpeg","tmp_name":"C:\\xampp\\tmp\\php351D.tmp","error":0,"size":65187}}

@@ -1,72 +1,62 @@
 <?php
-
 ob_start();
-ini_set('display_errors', 0);
-error_reporting(0);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 header('Content-Type: application/json');
 include 'db_connect.php';
 
-$data = json_decode(file_get_contents("php://input"), true);
-$lender_id = $data['lender_id'] ?? null;
+// Fetch all lenders
+$lenderSql = "SELECT id, companyname FROM lenders";
+$lenderResult = $conn->query($lenderSql);
 
-if (!$lender_id) {
-    echo json_encode(['success' => false, 'message' => 'Missing lender_id']);
+if (!$lenderResult || $lenderResult->num_rows === 0) {
+    echo json_encode(['success' => false, 'message' => 'No lenders found']);
     exit;
 }
 
-// Get lender name and amount (assuming this is in the `lenders` table)
-$lenderSql = "SELECT name, amount FROM lenders WHERE id = ?";
-$lenderStmt = $conn->prepare($lenderSql);
-$lenderStmt->bind_param("i", $lender_id);
-$lenderStmt->execute();
-$lenderResult = $lenderStmt->get_result();
+$companies = [];
 
-if (!$lenderResult || !$lenderRow = $lenderResult->fetch_assoc()) {
-    echo json_encode(['success' => false, 'message' => 'Lender not found']);
-    exit;
-}
+while ($lender = $lenderResult->fetch_assoc()) {
+    $lenderId = $lender['id'];
+    $companyName = $lender['companyname'];
 
-$lenderName = $lenderRow['name'];
-$amount = $lenderRow['amount'];
+    // Fetch terms for each lender
+    $termsSql = "SELECT term_1, term_2, term_3, term_4, term_5 
+                 FROM lender_terms 
+                 WHERE lender_id = ?";
+    $termsStmt = $conn->prepare($termsSql);
+    $termsStmt->bind_param("i", $lenderId);
+    $termsStmt->execute();
+    $termsResult = $termsStmt->get_result();
 
-// Get lender terms
-$termsSql = "SELECT term_1, term_2, term_3, term_4, term_5 
-             FROM lender_terms 
-             WHERE lender_id = ?";
-$termsStmt = $conn->prepare($termsSql);
-$termsStmt->bind_param("i", $lender_id);
-$termsStmt->execute();
-$termsResult = $termsStmt->get_result();
+    if ($termsResult && $termsRow = $termsResult->fetch_assoc()) {
+        $termsArray = array_filter([
+            $termsRow['term_1'],
+            $termsRow['term_2'],
+            $termsRow['term_3'],
+            $termsRow['term_4'],
+            $termsRow['term_5']
+        ]);
 
-if ($termsResult && $row = $termsResult->fetch_assoc()) {
-    $termsArray = array_filter([
-        $row['term_1'],
-        $row['term_2'],
-        $row['term_3'],
-        $row['term_4'],
-        $row['term_5']
-    ]);
-    $termsText = implode("\n", $termsArray);
+        $termsText = implode("\n", $termsArray);
 
-    $companies = [
-        [
-            'name' => $lenderName,
-            'amount' => $amount,
-            'overview' => "Offering Loans from $amount @ 1.8%",
+        $companies[] = [
+            'id' => $lenderId, // ✅ Added this line
+            'name' => $companyName,
+            'overview' => $termsRow['term_1'],
             'terms' => $termsText
-        ]
-    ];
+        ];
+    }
 
-    echo json_encode([
-        'success' => true,
-        'companies' => $companies
-    ]);
-} else {
-    echo json_encode(['success' => false, 'message' => 'No terms found']);
+    $termsStmt->close();
 }
 
-$lenderStmt->close();
-$termsStmt->close();
+echo json_encode([
+    'success' => true,
+    'companies' => $companies
+]);
+
 $conn->close();
 ?>
