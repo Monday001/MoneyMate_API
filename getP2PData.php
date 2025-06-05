@@ -7,50 +7,38 @@ error_reporting(E_ALL);
 header('Content-Type: application/json');
 include 'db_connect.php';
 
-// Fetch all lenders
-$lenderSql = "SELECT id, companyname FROM lenders";
-$lenderResult = $conn->query($lenderSql);
+// Fetch lenders and their terms using LEFT JOIN
+$sql = "SELECT l.id, l.companyname, t.term_1, t.term_2, t.term_3, t.term_4, t.term_5
+        FROM lenders l
+        LEFT JOIN lender_terms t ON l.id = t.lender_id";
 
-if (!$lenderResult || $lenderResult->num_rows === 0) {
+$result = $conn->query($sql);
+
+if (!$result || $result->num_rows === 0) {
     echo json_encode(['success' => false, 'message' => 'No lenders found']);
     exit;
 }
 
 $companies = [];
 
-while ($lender = $lenderResult->fetch_assoc()) {
-    $lenderId = $lender['id'];
-    $companyName = $lender['companyname'];
+while ($row = $result->fetch_assoc()) {
+    $termsArray = array_filter([
+        $row['term_1'],
+        $row['term_2'],
+        $row['term_3'],
+        $row['term_4'],
+        $row['term_5']
+    ]);
 
-    // Fetch terms for each lender
-    $termsSql = "SELECT term_1, term_2, term_3, term_4, term_5 
-                 FROM lender_terms 
-                 WHERE lender_id = ?";
-    $termsStmt = $conn->prepare($termsSql);
-    $termsStmt->bind_param("i", $lenderId);
-    $termsStmt->execute();
-    $termsResult = $termsStmt->get_result();
+    $termsText = !empty($termsArray) ? implode("\n", $termsArray) : "No terms available";
+    $overview = $row['term_1'] ?? "No overview available";
 
-    if ($termsResult && $termsRow = $termsResult->fetch_assoc()) {
-        $termsArray = array_filter([
-            $termsRow['term_1'],
-            $termsRow['term_2'],
-            $termsRow['term_3'],
-            $termsRow['term_4'],
-            $termsRow['term_5']
-        ]);
-
-        $termsText = implode("\n", $termsArray);
-
-        $companies[] = [
-            'id' => $lenderId, // ✅ Added this line
-            'name' => $companyName,
-            'overview' => $termsRow['term_1'],
-            'terms' => $termsText
-        ];
-    }
-
-    $termsStmt->close();
+    $companies[] = [
+        'id' => $row['id'],
+        'name' => $row['companyname'],
+        'overview' => $overview,
+        'terms' => $termsText
+    ];
 }
 
 echo json_encode([

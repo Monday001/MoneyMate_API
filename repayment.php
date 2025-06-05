@@ -15,7 +15,6 @@ if (!$loan_id || !$amount || !is_numeric($amount) || $amount <= 0) {
     exit;
 }
 
-// Generate a reference code: e.g., REF-20250506-ABCDE123
 function generateReferenceCode() {
     $date = date('Ymd');
     $rand = strtoupper(substr(md5(uniqid(mt_rand(), true)), 0, 8));
@@ -25,36 +24,122 @@ function generateReferenceCode() {
 $referenceCode = generateReferenceCode();
 
 try {
-    // Insert repayment with reference code
-    $insertSql = "INSERT INTO repayments (loan_id, amount_paid, payment_date, reference_code) VALUES (?, ?, NOW(), ?)";
-    $stmt = $conn->prepare($insertSql);
-    $stmt->bind_param("sds", $loan_id, $amount, $referenceCode);
+    // Fetch loan info
+    $loanSql = "SELECT amount, status, lender_id FROM loans WHERE id = ?";
+    $stmt = $conn->prepare($loanSql);
+    $stmt->bind_param("i", $loan_id);
     $stmt->execute();
-    $repayment_id = $stmt->insert_id;
+    $stmt->bind_result($loan_amount, $loan_status, $lender_id);
+    if (!$stmt->fetch()) {
+        echo json_encode(['success' => false, 'message' => 'Loan not found']);
+        exit;
+    }
     $stmt->close();
 
-    // Get the payment date
-    $getPaidOnSql = "SELECT payment_date FROM repayments WHERE id = ?";
-    $getStmt = $conn->prepare($getPaidOnSql);
-    $getStmt->bind_param("i", $repayment_id);
-    $getStmt->execute();
-    $getStmt->bind_result($paid_on);
-    $getStmt->fetch();
-    $getStmt->close();
+    if ($loan_status === 'closed') {
+        echo json_encode(['success' => false, 'message' => 'Loan is already closed.']);
+        exit;
+    }
 
-    // Get the company/lender name
-    $getCompanySql = "
-        SELECT lenders.name 
-        FROM loans 
-        JOIN lenders ON loans.lender_id = lenders.id 
-        WHERE loans.id = ?
-    ";
-    $companyStmt = $conn->prepare($getCompanySql);
-    $companyStmt->bind_param("i", $loan_id);
+    // Get total repaid so far
+    $sumSql = "SELECT COALESCE(SUM(amount_paid), 0) FROM repayments WHERE loan_id = ?";
+    $sumStmt = $conn->prepare($sumSql);
+    $sumStmt->bind_param("i", $loan_id);
+    $sumStmt->execute();
+    $sumStmt->bind_result($total_repaid);
+    $sumStmt->fetch();
+    $sumStmt->close();
+
+    $remaining = $loan_amount - $total_repaid;
+
+    if ($amount > $remaining) {
+        echo json_encode([
+            'success' => false,
+            'message' => 'Payment exceeds remaining loan balance.',
+            'remaining_balance' => round($remaining, 2)
+        ]);
+        exit;
+    }
+
+    // **Check if a repayment record for this loan with the same reference code exists**
+    // If yes, update the repayment amount & date; else insert new repayment
+    $checkSql = "SELECT id, amount_paid FROM repayments WHERE loan_id = ? AND reference_code = ?";
+    $checkStmt = $conn->prepare($checkSql);
+    $checkStmt->bind_param("is", $loan_id, $referenceCode);
+    $checkStmt->execute();
+    $checkStmt->bind_result($existing_repayment_id, $existing_amount_paid);
+
+    if ($checkStmt->fetch()) {
+        // Record exists - update repayment
+        $checkStmt->close();
+
+        $new_amount_paid = $existing_amount_paid + $amount;
+        if ($new_amount_paid > $remaining + $existing_amount_paid) {
+            echo json_encode([
+                'success' => false,
+                'message' => 'Updated payment exceeds remaining loan balance.',
+                'remaining_balance' => round($remaining, 2)
+            ]);
+            exit;
+        }
+
+        $updateSql = "UPDATE repayments SET amount_paid = ?, payment_date = NOW() WHERE id = ?";
+        $updateStmt = $conn->prepare($updateSql);
+        $updateStmt->bind_param("di", $new_amount_paid, $existing_repayment_id);
+        $updateStmt->execute();
+        $updateStmt->close();
+
+        $repayment_id = $existing_repayment_id;
+
+    } else {
+        $checkStmt->close();
+
+        // Insert repayment
+        $insertSql = "INSERT INTO repayments (loan_id, amount_paid, payment_date, reference_code, lender_id)
+                      VALUES (?, ?, NOW(), ?, ?)";
+        $insertStmt = $conn->prepare($insertSql);
+        $insertStmt->bind_param("idsi", $loan_id, $amount, $referenceCode, $lender_id);
+        $insertStmt->execute();
+        $repayment_id = $insertStmt->insert_id;
+        $insertStmt->close();
+    }
+
+    // Get payment date
+    $dateSql = "SELECT payment_date FROM repayments WHERE id = ?";
+    $dateStmt = $conn->prepare($dateSql);
+    $dateStmt->bind_param("i", $repayment_id);
+    $dateStmt->execute();
+    $dateStmt->bind_result($paid_on);
+    $dateStmt->fetch();
+    $dateStmt->close();
+
+    // Get company name
+    $companySql = "SELECT name FROM lenders WHERE id = ?";
+    $companyStmt = $conn->prepare($companySql);
+    $companyStmt->bind_param("i", $lender_id);
     $companyStmt->execute();
     $companyStmt->bind_result($company_name);
     $companyStmt->fetch();
     $companyStmt->close();
+
+    // Calculate new total repaid and balance again
+    $sumStmt = $conn->prepare($sumSql);
+    $sumStmt->bind_param("i", $loan_id);
+    $sumStmt->execute();
+    $sumStmt->bind_result($new_total_repaid);
+    $sumStmt->fetch();
+    $sumStmt->close();
+
+    $new_balance = $loan_amount - $new_total_repaid;
+
+    if ($new_balance <= 0.001) {
+        $updateLoanSql = "UPDATE loans SET status = 'closed', date_updated = NOW() WHERE id = ?";
+        $updateStmt = $conn->prepare($updateLoanSql);
+        $updateStmt->bind_param("i", $loan_id);
+        $updateStmt->execute();
+        $updateStmt->close();
+        $loan_status = 'closed';
+    }
 
     echo json_encode([
         'success' => true,
@@ -64,11 +149,12 @@ try {
         'amount' => $amount,
         'paid_on' => $paid_on,
         'company_name' => $company_name ?? 'N/A',
-        'reference_code' => $referenceCode
+        'reference_code' => $referenceCode,
+        'remaining_balance' => round($new_balance, 2),
+        'status' => $loan_status
     ]);
 } catch (Exception $e) {
-    echo json_encode(['success' => false, 'message' => 'Failed to insert repayment: ' . $e->getMessage()]);
+    echo json_encode(['success' => false, 'message' => 'Error: ' . $e->getMessage()]);
 }
 
 $conn->close();
-?>

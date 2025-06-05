@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 // Get raw JSON input
 $data = json_decode(file_get_contents("php://input"), true);
 
-// Lender login: Requires private_key and password
+// Lender login: private_key + password
 if (!empty($data['private_key']) && !empty($data['password'])) {
     $private_key = $conn->real_escape_string($data['private_key']);
     $password = $data['password'];
@@ -41,22 +41,16 @@ if (!empty($data['private_key']) && !empty($data['password'])) {
                 "username" => $lender['username'] ?? null
             ]);
         } else {
-            echo json_encode([
-                "success" => false,
-                "message" => "Incorrect lender password"
-            ]);
+            echo json_encode(["success" => false, "message" => "Invalid password for lender"]);
         }
     } else {
-        echo json_encode([
-            "success" => false,
-            "message" => "Invalid lender private key"
-        ]);
+        echo json_encode(["success" => false, "message" => "Lender not found"]);
     }
+    exit();
+}
 
-    $stmt->close();
-
-// Regular user login: Requires username and password
-} elseif (!empty($data['username']) && !empty($data['password'])) {
+// User login: username + password
+if (!empty($data['username']) && !empty($data['password'])) {
     $username = $conn->real_escape_string($data['username']);
     $password = $data['password'];
 
@@ -75,28 +69,16 @@ if (!empty($data['private_key']) && !empty($data['password'])) {
                 "message" => "User login successful",
                 "user_type" => "user",
                 "borrower_id" => $user['id'],
-                "username" => $user['username']
+                "username" => $user['username'] ?? null
             ]);
         } else {
-            echo json_encode([
-                "success" => false,
-                "message" => "Incorrect user password"
-            ]);
+            echo json_encode(["success" => false, "message" => "Invalid password for user"]);
         }
     } else {
-        echo json_encode([
-            "success" => false,
-            "message" => "User not found"
-        ]);
+        echo json_encode(["success" => false, "message" => "User not found"]);
     }
-
-    $stmt->close();
-} else {
-    echo json_encode([
-        "success" => false,
-        "message" => "Missing login credentials"
-    ]);
+    exit();
 }
 
-$conn->close();
-?>
+// If neither login method matched
+echo json_encode(["success" => false, "message" => "Invalid login credentials"]);
