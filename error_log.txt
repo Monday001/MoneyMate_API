@@ -3,3 +3,16 @@ Stack trace:
 #0 C:\xampp\htdocs\moneymate\apply_loan.php(76): mysqli_stmt->execute()
 #1 {main}
   thrown in C:\xampp\htdocs\moneymate\apply_loan.php on line 76
+[05-Jun-2025 07:47:32 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in C:\xampp\htdocs\moneymate\apply_loan.php:75
+Stack trace:
+#0 C:\xampp\htdocs\moneymate\apply_loan.php(75): mysqli->prepare('SELECT phone_nu...')
+#1 {main}
+  thrown in C:\xampp\htdocs\moneymate\apply_loan.php on line 75
+[05-Jun-2025 08:51:21 Europe/Berlin] Invalid loan_details JSON: {"borrower_id":20,"lender_id":11,amount":5000,"purpose":"Business startup"}
+[05-Jun-2025 08:58:15 Europe/Berlin] Missing required fields or images: {"loan_details":"{\"lender_id\":11,\"borrower_id\":20,\"amount\":\"10000\",\"purpose\":\"Rally\",\"full_name\":\"Austin Muigai\",\"email_address\":\"lyttlebrianne@gmail.com\",\"phone_number\":\"0123456789\"}"}
+[05-Jun-2025 10:24:55 Europe/Berlin] Invalid loan_details JSON: {"borrower_id":20,"lender_id":11,amount":5000,"purpose":"Business startup"}
+[05-Jun-2025 10:40:13 Europe/Berlin] Phone mismatch. Submitted: +254700123456, Registered: 123456789
+[05-Jun-2025 10:40:44 Europe/Berlin] Phone mismatch. Submitted: 0123456789, Registered: 123456789
+[06-Jun-2025 05:36:03 Europe/Berlin] Missing required fields or images: {"loan_details":"{\"lender_id\":11,\"borrower_id\":20,\"amount\":\"10000\",\"purpose\":\"Shopping\",\"full_name\":\"Austin\",\"email_address\":\"lyttlebrianne@gmail.com\",\"phone_number\":\"123456789\"}"}
+[06-Jun-2025 06:18:20 Europe/Berlin] Missing required fields or images: {"loan_details":"{\"lender_id\":11,\"borrower_id\":20,\"amount\":\"10000\",\"purpose\":\"Recreation\",\"full_name\":\"Austin\",\"email_address\":\"lyttlebrianne@gmail.com\",\"phone_number\":\"123456789\"}"}
+[06-Jun-2025 06:56:18 Europe/Berlin] Missing field: phonenumber

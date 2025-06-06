@@ -17,27 +17,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $conn->begin_transaction();
 
     try {
-        // Get amount, borrower_id, and lender_id from loans table
-        $stmt = $conn->prepare("SELECT amount, borrower_id, lender_id FROM loans WHERE id = ?");
+        // Get amount and borrower_id from loans, and lender_id from loan_applications
+        $stmt = $conn->prepare("
+            SELECT l.amount, l.borrower_id, la.lender_id
+            FROM loans l
+            JOIN loan_applications la ON l.id = la.loan_id
+            WHERE l.id = ?
+        ");
         $stmt->bind_param("i", $loan_id);
         $stmt->execute();
         $stmt->bind_result($amount, $borrower_id, $lender_id);
         if (!$stmt->fetch()) {
-            throw new Exception("Loan not found");
+            throw new Exception("Loan or application not found");
         }
         $stmt->close();
 
-        // Insert disbursement referencing correct loan_id
+        // Insert disbursement
         $stmt1 = $conn->prepare("INSERT INTO funds_disbursement (loan_id, disbursed_amount, disbursement_status) VALUES (?, ?, 'disbursed')");
         $stmt1->bind_param("id", $loan_id, $amount);
         $stmt1->execute();
 
-        // Update loans table status only (removed balance update)
+        // Update loan status
         $stmt2 = $conn->prepare("UPDATE loans SET status = 'disbursed' WHERE id = ?");
         $stmt2->bind_param("i", $loan_id);
         $stmt2->execute();
 
-        // Insert notification for approval
+        // Send notification
         $message = "Congratulations! Your loan request has been approved and disbursed.";
         $stmt3 = $conn->prepare("INSERT INTO notifications (borrower_id, loan_id, lender_id, message, status) VALUES (?, ?, ?, ?, 'unread')");
         $stmt3->bind_param("iiis", $borrower_id, $loan_id, $lender_id, $message);

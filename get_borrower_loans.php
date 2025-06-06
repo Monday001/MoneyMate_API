@@ -1,5 +1,6 @@
 <?php
 include 'db_connect.php';
+
 header('Content-Type: application/json');
 
 $borrower_id = $_GET['borrower_id'];
@@ -10,15 +11,16 @@ if (!$borrower_id) {
 }
 
 $sql = "SELECT 
-            id AS loan_id,
-            amount,
-            purpose,
-            status,
-            date_applied,
-            date_updated,
-            company_name
-        FROM loans
-        WHERE borrower_id = ?";
+    l.id AS loan_id,
+    l.amount,
+    la.purpose,
+    l.status,
+    l.date_applied,
+    l.date_updated,
+    l.company_name
+FROM loans l
+JOIN loan_applications la ON l.id = la.loan_id
+WHERE la.borrower_id = ?";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $borrower_id);

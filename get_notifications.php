@@ -23,15 +23,24 @@ if ($borrower_id <= 0) {
     exit;
 }
 
-// Fetch notifications for the borrower along with loan and lender info (if available)
+// Updated SQL with proper joins and aliases
 $sql = "
-    SELECT n.*, l.companyname
+    SELECT 
+        n.id AS notification_id,
+        n.message,
+        n.status AS notification_status,
+        n.created_at,
+        l.id AS loan_id,
+        l.status AS loan_status,
+        l.amount AS loan_amount,
+        n.lender_id,
+        le.companyname AS lender_name
     FROM notifications n
-    JOIN lenders l ON l.id = n.lender_id
+    LEFT JOIN loans l ON n.loan_id = l.id
+    LEFT JOIN lenders le ON n.lender_id = le.id
     WHERE n.borrower_id = ?
     ORDER BY n.id DESC
 ";
-
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $borrower_id);
@@ -44,16 +53,16 @@ while ($row = $result->fetch_assoc()) {
     $notifications[] = [
         'notification_id' => (int)$row['notification_id'],
         'message' => $row['message'],
-        'status' => $row['notification_status'],   // unread/read
+        'status' => $row['notification_status'],
         'created_at' => $row['created_at'],
         'loan' => [
-            'loan_id' => $row['loan_id'] ? (int)$row['loan_id'] : null,
+            'loan_id' => isset($row['loan_id']) ? (int)$row['loan_id'] : null,
             'status' => $row['loan_status'] ?? null,
-            'amount' => $row['loan_amount'] !== null ? (float)$row['loan_amount'] : null,
+            'amount' => isset($row['loan_amount']) ? (float)$row['loan_amount'] : null,
         ],
         'lender' => [
-            'lender_id' => $row['lender_id'] ? (int)$row['lender_id'] : null,
-            'company_name' => $row['lender_name'] ?? null,
+            'lender_id' => isset($row['lender_id']) ? (int)$row['lender_id'] : null,
+            'companyname' => $row['lender_name'] ?? null,
         ]
     ];
 }
